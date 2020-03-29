@@ -1,4 +1,5 @@
-const
- COLS = 10,
- ROWS = 20,
- BLOCK_SIZE = 30;
+'use strict';
+
+const COLS = 10;
+const ROWS = 20;
+const BLOCK_SIZE = 30;
