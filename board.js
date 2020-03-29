@@ -14,15 +14,14 @@ class Board {
 
     valid(p) {
         return p.shape.every((row, dy) => {
-                return row.every((value, dx) => {
-                        let x = p.x + dx;
-                        let y = p.y + dy;
-                        return (
-                            this.isEmpty(value) ||
-                            (this.insideWalls(x) &&
-                                this.aboveFloor(y)
-                            );
-                        });
-                });
-        }
+            return row.every((value, dx) => {
+                let x = p.x + dx;
+                let y = p.y + dy;
+                return (
+                    value === 0 ||
+                    (this.insideWalls(x) && this.aboveFloor(y) && this.notOccupied(x, y))
+                );
+            });
+        });
     }
+}
