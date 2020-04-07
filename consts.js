@@ -5,14 +5,14 @@ const ROWS = 20;
 const BLOCK_SIZE = 30;
 const LINES_PER_LEVEL = 10;
 const COLORS = [
-    'none',
-    'cyan',
-    'blue',
-    'orange',
-    'yellow',
-    'green',
-    'purple',
-    'red'
+    "none",
+    "cyan",
+    "blue",
+    "orange",
+    "yellow",
+    "green",
+    "purple",
+    "red",
 ];
 Object.freeze(COLORS);
 
@@ -100,5 +100,5 @@ const LEVEL = {
     19: 30,
     20: 30,
     // 29+ is 20ms
-}
+};
 Object.freeze(LEVEL);
