@@ -163,7 +163,7 @@ class Board {
         }
 
         // Reverse the order of the columns.
-        p.shape.forEach(row => row.reverse());
+        p.shape.forEach((row) => row.reverse());
         return p;
     }
 
