@@ -1,4 +1,4 @@
-'use strict';
+"use strict";
 
 const COLS = 10;
 const ROWS = 20;
@@ -64,7 +64,7 @@ const KEY = {
     RIGHT: 39,
     DOWN: 40,
     P: 80
-}
+};
 Object.freeze(KEY);
 
 const POINTS = {
