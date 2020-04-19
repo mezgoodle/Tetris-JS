@@ -1,5 +1,5 @@
 const canvas = document.getElementById("board");
-const ctx = canvas.getContext('2d');
+const ctx = canvas.getContext("2d");
 const canvasNext = document.getElementById("next");
 const ctxNext = canvasNext.getContext('2d');
 
@@ -27,11 +27,11 @@ let account = new Proxy(accountValues, {
 let requestId;
 
 moves = {
-    [KEY.LEFT]: p => ({...p, x: p.x - 1 }),
-    [KEY.RIGHT]: p => ({...p, x: p.x + 1 }),
-    [KEY.DOWN]: p => ({...p, y: p.y + 1 }),
-    [KEY.SPACE]: p => ({...p, y: p.y + 1 }),
-    [KEY.UP]: p => board.rotate(p)
+    [KEY.LEFT]: (p) => ({...p, x: p.x - 1 }),
+    [KEY.RIGHT]: (p) => ({...p, x: p.x + 1 }),
+    [KEY.DOWN]: (p) => ({...p, y: p.y + 1 }),
+    [KEY.SPACE]: (p) => ({...p, y: p.y + 1 }),
+    [KEY.UP]: (p) => board.rotate(p)
 };
 
 let board = new Board(ctx, ctxNext);
@@ -46,7 +46,7 @@ function initNext() {
 }
 
 function addEventListener() {
-    document.addEventListener('keydown', event => {
+    document.addEventListener("keydown", event => {
         if (event.keyCode === KEY.P) {
             pause();
         }
@@ -127,9 +127,9 @@ function pause() {
     cancelAnimationFrame(requestId);
     requestId = null;
 
-    ctx.fillStyle = 'black';
+    ctx.fillStyle = "black";
     ctx.fillRect(1, 3, 8, 1.2);
-    ctx.font = '1px Arial';
-    ctx.fillStyle = 'yellow';
-    ctx.fillText('PAUSED', 3, 4);
+    ctx.font = "1px Arial";
+    ctx.fillStyle = "yellow";
+    ctx.fillText("PAUSED", 3, 4);
 }
