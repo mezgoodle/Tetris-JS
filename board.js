@@ -70,7 +70,7 @@ class Board {
         this.grid.forEach((row, y) => {
 
             // If every value is greater than 0.
-            if (row.every(value => value > 0)) {
+            if (row.every((value) => value > 0)) {
                 lines++;
 
                 // Remove the row.
